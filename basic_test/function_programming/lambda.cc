@@ -2,6 +2,12 @@
 #include<vector>
 #include<algorithm>
 using namespace std;
+
+void myfun (int i ) {
+    cout<<"print from my fun "<<i<<endl; 
+}
+
+
 int main(void)
 {
 
@@ -15,4 +21,11 @@ int main(void)
 
 	for_each(myvector.cbegin(),myvector.cend(),
 			[](const int &i){cout<<i<<endl; });
+
+        cout<<"-------------------------------------------";
+
+
+	for_each(myvector.cbegin(),myvector.cend(),myfun);
+
+
 }
